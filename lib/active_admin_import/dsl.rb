@@ -44,9 +44,14 @@ module ActiveAdminImport
 
 
     def active_admin_import(options = {}, &block)
+
+
       options.assert_valid_keys(*Options::VALID_OPTIONS)
 
       options = Options.options_for(config, options)
+
+      puts options
+      
       params_key = ActiveModel::Naming.param_key(options[:template_object])
 
       collection_action :import, method: :get do
