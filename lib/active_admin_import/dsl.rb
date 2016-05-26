@@ -48,7 +48,8 @@ module ActiveAdminImport
       options.assert_valid_keys(*Options::VALID_OPTIONS)
       options = Options.options_for(config, options)
 
-      if (options[:if].present? and yield(options[:if] || !options[:if].present?)
+      # if (options[:if].present? and yield(options[:if] || !options[:if].present?)
+      if (options[:if].present?)
 
         params_key = ActiveModel::Naming.param_key(options[:template_object])
 
