@@ -19,7 +19,8 @@ module ActiveAdminImport
         :resource_class,
         :resource_label,
         :plural_resource_label,
-        :headers_rewrites
+        :headers_rewrites,
+        :if
     ].freeze
 
 
